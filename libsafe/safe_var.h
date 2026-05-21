@@ -1,6 +1,10 @@
 #ifndef SAFE_VAR_H
 #define SAFE_VAR_H
 
+#ifndef _GNU_SOURCE
+#define _GNU_SOURCE /* Se define _GNU_SOURCE para habilitar el uso de cerrojos de lectura/escritura de POSIX (pthread_rwlock_t), los cuales requieren esta macro de prueba de características en glibc y no se activan por defecto en el modo de compilación estándar. */
+#endif
+
 #include <pthread.h>
 #include <stddef.h>
 

@@ -1,3 +1,6 @@
+#ifndef _GNU_SOURCE
+#define _GNU_SOURCE /* Se define _GNU_SOURCE al principio del archivo fuente para asegurar que todas las extensiones de GNU/POSIX, incluyendo las funciones de cerrojo de lectura/escritura (pthread_rwlock_t), estén expuestas en toda la unidad de traducción antes de cualquier inclusión de biblioteca del sistema. */
+#endif
 #include "safe_var.h"
 #include <stdlib.h>
 #include <string.h>
